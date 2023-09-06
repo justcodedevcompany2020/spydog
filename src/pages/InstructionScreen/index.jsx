@@ -1,4 +1,4 @@
-import {useState, useRef, useEffect} from 'react';
+import { useState, useRef, useEffect } from 'react';
 import {
   StyleSheet,
   View,
@@ -6,48 +6,54 @@ import {
   Text,
   TouchableOpacity,
 } from 'react-native';
-import { useSelector} from 'react-redux';
-import {Gstyles} from '../../../gStyles';
-import {Instruction} from '../../components/Instruction';
-import {Colors} from '../../ui/color';
-import {AnonymousSvg, DogSvg, FastSvg, LargeSvg, SevureSvg} from '../../../svg';
+import { useSelector } from 'react-redux';
+import { Gstyles } from '../../../gStyles';
+import { Instruction } from '../../components/Instruction';
+import { Colors } from '../../ui/color';
+import { AnonymousSvg, DogSvg, FastSvg, LargeSvg, SevureSvg } from '../../../svg';
 import dark from '../../../assets/images/1.png';
 import light from '../../../assets/images/2.png';
 import SwiperFlatList from 'react-native-swiper-flatlist';
+import { useTranslation } from 'react-i18next';
+import { t } from '../../ui/lang';
 
-export const InstructionScreen = ({navigation}) => {
+
+export const InstructionScreen = ({ navigation }) => {
   const mainData = useSelector(st => st.mainData);
   const [active, setActive] = useState(0);
   const swiperRef = useRef(null);
+  // const { t } = useTranslation();
+
+
   const [data, setData] = useState([
     {
-      title: `Hello! I'm VPN SpyDog`,
-      text1: 'I make the internet',
-      text2: 'limitless at high speed',
+      title: t(mainData.lang).ImVPN,
+      text1: t(mainData.lang).Imake,
+      text2: t(mainData.lang).limitless,
       svg: <DogSvg />,
     },
     {
-      title: `Anonymous`,
-      text1: 'Hide your IP.',
-      text2: 'Be anonymous on the internet',
+      title: t(mainData.lang).anonymous,
+      text1: t(mainData.lang).hideyourip,
+      text2: t(mainData.lang).beanonymous,
       svg: <AnonymousSvg />,
     },
     {
-      title: `Fast`,
-      text1: 'Our servers have',
-      text2: 'high-speed access',
+      title: t(mainData.lang).fast,
+      text1: t(mainData.lang).ourservershave,
+      text2: t(mainData.lang).highspeed,
       svg: <FastSvg />,
     },
     {
-      title: `Large number of countries`,
-      text1: 'We offer a large selection of servers',
-      text2: 'different countries',
+      title: t(mainData.lang).largenumber,
+      text1: t(mainData.lang).weoffer,
+      text2: t(mainData.lang).differentcountries,
       svg: <LargeSvg />,
     },
     {
-      title: `Secure`,
-      text1: 'Transfer traffic via',
-      text2: 'an encrypted tunnel',
+      title: t(mainData.lang).secure,
+      text1: t(mainData.lang).Transfer,
+      text2: t(mainData.lang).anencryptedtunnel,
       svg: <SevureSvg />,
     },
   ]);
@@ -60,7 +66,7 @@ export const InstructionScreen = ({navigation}) => {
     }
   };
 
-  const renderItem = ({item, index}) => {
+  const renderItem = ({ item, index }) => {
     return (
       <Instruction
         key={index}
@@ -75,11 +81,11 @@ export const InstructionScreen = ({navigation}) => {
 
 
   return (
-    <View style={{flex: 1}}>
+    <View style={{ flex: 1 }}>
       <ImageBackground
-        style={{flex: 1, justifyContent: 'center'}}
+        style={{ flex: 1, justifyContent: 'center' }}
         source={mainData.mood === '#ECF3FB' ? light : dark}>
-        <View style={[Gstyles.main, {marginTop: 0, paddingHorizontal: 0}]}>
+        <View style={[Gstyles.main, { marginTop: 0, paddingHorizontal: 0 }]}>
           <SwiperFlatList
             // index={active}
             ref={swiperRef}
@@ -96,12 +102,12 @@ export const InstructionScreen = ({navigation}) => {
               <Text
                 style={[
                   Gstyles.smallText,
-                  {fontSize: 16, color: Colors(mainData.mood).color},
+                  { fontSize: 16, color: Colors(mainData.mood).color },
                 ]}>
-                Skip
+                {t(mainData.lang).skip}
               </Text>
             </TouchableOpacity>
-            <View style={{flexDirection: 'row'}}>
+            <View style={{ flexDirection: 'row' }}>
               {data.map((elm, i) => {
                 return (
                   <View
@@ -110,10 +116,10 @@ export const InstructionScreen = ({navigation}) => {
                       styles.item,
                       active === i
                         ? {
-                            backgroundColor: Colors(mainData.mood)
-                              .activeItemColor,
-                          }
-                        : {backgroundColor: Colors(mainData.mood).itemColor},
+                          backgroundColor: Colors(mainData.mood)
+                            .activeItemColor,
+                        }
+                        : { backgroundColor: Colors(mainData.mood).itemColor },
                     ]}></View>
                 );
               })}
@@ -122,9 +128,9 @@ export const InstructionScreen = ({navigation}) => {
               <Text
                 style={[
                   Gstyles.smallText,
-                  {fontSize: 16, color: Colors(mainData.mood).color},
+                  { fontSize: 16, color: Colors(mainData.mood).color },
                 ]}>
-                Next
+                {t(mainData.lang).next}
               </Text>
             </TouchableOpacity>
           </View>

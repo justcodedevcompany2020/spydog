@@ -125,3 +125,10 @@ export const GetMyTarife = (code) => {
             });
     }
 }
+
+export const ChnageLanguage = (lang) => {
+    return {
+        type: 'ChnageLanguage',
+        lang
+    }
+}

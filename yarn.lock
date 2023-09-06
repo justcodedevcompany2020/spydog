@@ -4644,6 +4644,13 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
+i18next@^23.4.6:
+  version "23.4.6"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-23.4.6.tgz#10211e72d5bd29e274baae99c6cc0178b93a93f8"
+  integrity sha512-jBE8bui969Ygv7TVYp0pwDZB7+he0qsU+nz7EcfdqSh+QvKjEfl9YPRQd/KrGiMhTYFGkeuPaeITenKK/bSFDg==
+  dependencies:
+    "@babel/runtime" "^7.22.5"
+
 i@^0.3.7:
   version "0.3.7"
   resolved "https://registry.npmjs.org/i/-/i-0.3.7.tgz"
@@ -7373,10 +7380,10 @@ react-freeze@^1.0.0:
   resolved "https://registry.npmjs.org/react-freeze/-/react-freeze-1.0.3.tgz"
   integrity sha512-ZnXwLQnGzrDpHBHiC56TXFXvmolPeMjTn1UOm610M4EXGzbEDR7oOIyS2ZiItgbs6eZc4oU/a0hpk8PrcKvv5g==
 
-react-i18next@^13.0.1:
-  version "13.0.1"
-  resolved "https://registry.npmjs.org/react-i18next/-/react-i18next-13.0.1.tgz"
-  integrity sha512-gMO6N2GfSfuH7xlHSsZ/mZf+Py9bLm/+EDKIn5fNTuDTjcCcwmMU5UEuGCDk5mdfivbo7ySyYXBN7B9tbGUxiA==
+react-i18next@^13.2.2:
+  version "13.2.2"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-13.2.2.tgz#b1e78ed66a54f4bc819616f68b98221e1b1a1936"
+  integrity sha512-+nFUkbRByFwnrfDcYqvzBuaeZb+nACHx+fAWN/pZMddWOCJH5hoc21+Sa/N/Lqi6ne6/9wC/qRGOoQhJa6IkEQ==
   dependencies:
     "@babel/runtime" "^7.22.5"
     html-parse-stringify "^3.0.1"
@@ -7427,15 +7434,15 @@ react-native-google-pay@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-native-google-pay/-/react-native-google-pay-2.1.0.tgz#84d5cda9f2bb1d9484b3a0d1ebd9c2754b5f6425"
   integrity sha512-MAz0pKx3tZLkdhEteG/p1eZMO9I6MREth3TZnxw/puAg90vFQVP6e26dIph5IJlIhaXEOdchFZDHnioHf48gUA==
 
-react-native-gpay@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/react-native-gpay/-/react-native-gpay-1.0.3.tgz#bcc94ad21303cac82f59031536595214cd226735"
-  integrity sha512-72QMmvwEgz+Nku86Pv7wo/rvCIo0iJThV7kDawZZCIdc/klY5UckXDS4IfxbTJXOqd0OzgN+SzGEAXG0QNft2g==
-
 react-native-gradle-plugin@^0.71.19:
   version "0.71.19"
   resolved "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.19.tgz"
   integrity sha512-1dVk9NwhoyKHCSxcrM6vY6cxmojeATsBobDicX0ZKr7DgUF2cBQRTKsimQFvzH8XhOVXyH8p4HyDSZNIFI8OlQ==
+
+react-native-localize@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-localize/-/react-native-localize-3.0.2.tgz#43fa75c0097dbdb24a54ff320b3c8ad732407365"
+  integrity sha512-/l/oE1LVNgIRRhLbhmfFMHiWV0xhUn0A0iz1ytLVRYywL7FTp8Rx2vkJS/q/RpExDvV7yLw2493XZBYIM1dnLQ==
 
 react-native-looped-carousel@^0.1.13:
   version "0.1.13"
@@ -7484,6 +7491,11 @@ react-native-screens@^3.21.0:
   dependencies:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
+
+react-native-share@^9.4.0:
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-share/-/react-native-share-9.4.0.tgz#0619afd2d2092d633e7811db2b3d4a1779e2db76"
+  integrity sha512-yuT5wX+Ew1Wy0HonAbGn0xL4rD60e5xeQCB3NuGetlUqx+bocMtf6YjtqsOot01exszPnfyWh32DHP2a5YOSCA==
 
 react-native-simple-openvpn@^2.1.0:
   version "2.1.0"

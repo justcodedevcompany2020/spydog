@@ -1,6 +1,7 @@
 const initialState = {
   mood: '#ECF3FB',
   menu: false,
+  lang: ''
 };
 
 const MainReducer = (state = initialState, action) => {
@@ -14,6 +15,9 @@ const MainReducer = (state = initialState, action) => {
       break;
     case 'OpenMenu':
       item.menu = action.open
+      break
+    case 'ChnageLanguage':
+      item.lang = action.lang
       break
     default:
       break;
